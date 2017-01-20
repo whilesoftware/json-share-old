@@ -10,7 +10,7 @@
 
   <base href="/json/">
 
-  <title>json helper - a minimal utility for sharing json data</title>
+  <title>json share - a minimal utility for sharing json data</title>
 
   <script src="js/angular.min.js"></script>
   <script src="js/angular-ui-router.min.js"></script>
@@ -38,23 +38,40 @@
 
     <!-- Navigation -->
     <div class="theheader">
+      <!-- extra small header -->
       <div class="xs-only">
-        small header
+        <div class="wordmark">
+          json share
+        </div>
       </div>
-      <div class="ge-sm">
-        full sized header
+
+      <!-- small and larger share the same header -->
+      <div class="sm-only innerarea baseline">
+        <div class="flex">
+          <div class="wordmark">
+            json share
+          </div>
+          <div class="menu">
+            
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Page Content -->
     <div class="thebody">
-    <ui-view></ui-view>
+      <div class="innerarea">
+        <ui-view></ui-view>
+      </div>
     </div>
   
     <!-- Footer -->
     <div class="thefooter">
-      &copy; 2017 while(software)
+      <div class="innerarea">
+        &copy; 2017 while(software)
+      </div>
     </div>
+
   </div>
 </body>
 

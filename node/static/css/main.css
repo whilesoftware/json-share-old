@@ -11,68 +11,89 @@ html, body, .pageWrapper {
 }
 
 .theheader {
-  height: 50px;
-  line-height: 50px;
-  overflow: hidden;
-  display: flex;
 }
 .thebody {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .thefooter {
-  height: 50px;
-  line-height: 50px;
   overflow: hidden;
   background: #eee;
+  padding: 10px;
+}
+
+.flex {
+  display: flex;
+  align-items: baseline;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexgrow {
+  flex: 1;
+}
+
+.vcenter {
+  display: flex;
+  align-items: center;
+}
+
+
+.hcenter {
+  justify-content: center;
 }
 
 .xs-only {}
 .sm-only {}
-.md-only {}
-.lg-only {}
-
-.ge-sm {}
-.ge-md {}
-.ge-lg {}
 
 @media only screen and (max-width: 767px) {
   .sm-only { display:none; }
-  .md-only { display:none; }
-  .lg-only { display:none; }
-  .ge-sm { display:none; }
-  .ge-md { display:none; }
-  .ge-lg { display:none; }
+
+  .theheader {
+    background: #eee;
+  }
+
+  .theheader .wordmark {
+    font-weight: bold;
+    margin-right: 20px;
+  }
 }
 
 /* small */
-@media only screen and (min-width: 768px) and (max-width: 991px){
+@media only screen and (min-width: 768px) {
   .xs-only { display:none; }
-  .md-only { display:none; }
-  .lg-only { display:none; }
-  .ge-md { display:none; }
-  .ge-lg { display:none; }
-  .theheader {
-    background: #7ecefd;
-  }
-}
 
-/* medium */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .xs-only { display:none; }
-  .sm-only { display:none; }
-  .lg-only { display:none; }
-  .ge-lg { display:none; }
   .theheader {
-    background: #fff6e5;
+    display: flex;
+    background: #2185c5;
+    color: #fff;
   }
-}
+  .baseline {
+    justify-content: baseline;
+  }
+  .innerarea {
+    width: 748px;
+    padding: 10px;
+    margin: 0 auto 0 auto;
+  }
 
-/* large */
-@media only screen and (min-width: 1200px) {
-  .xs-only { display:none; }
-  .sm-only { display:none; }
-  .md-only { display:none; }
-  .theheader {
-    background: #ff7f66;
+  .wordmark {
+    font-weight: bold;
+    font-size: 180%;
+  }
+
+  .menu {
+    font-size: 120%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .tagmark {
+    font-size: 133%;
   }
 }
