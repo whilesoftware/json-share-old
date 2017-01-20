@@ -1,4 +1,4 @@
-docker-compse.yml
+docker-compose.yml
 
 shared/data/
 production/
